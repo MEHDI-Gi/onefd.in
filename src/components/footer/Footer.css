@@ -1,0 +1,57 @@
+/*---- footer ----*/
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+    border-top: solid 0.5px var(--navBar);
+}
+.footer .sections{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    width: 100%;
+    margin: 0;
+    height: 45px;
+    transition: 0.5s;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer .sections  label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.top-line{
+    background-color: var(--liceyBack);
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.sections input{
+    display: none;
+    transition: 0.5s;
+}
+.sections input:nth-child(1):checked ~ .top-line{
+    left: 0%;
+}
+.sections input:nth-child(2):checked ~ .top-line{
+    left: 50%;
+}
+
+
+.sections input:nth-child(1):checked ~ label:nth-last-child(2),
+.sections input:nth-child(2):checked ~ label:nth-last-child(1){
+    color: var(--liceyBack);
+}

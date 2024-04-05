@@ -1,0 +1,20 @@
+#matiere{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    width: 300%;
+    transition: 0.5s;
+    justify-items: center;
+}
+
+#math{
+    width: 100%;
+    overflow: hidden;
+}
+#arabic{
+    width: 100%;
+}
+#english{
+    width: 100%;
+}
+
+

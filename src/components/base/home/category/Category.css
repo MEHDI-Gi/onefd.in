@@ -1,0 +1,42 @@
+#category{
+    margin: 3px 0;
+}
+#category .category-list ul{
+    display: flex;
+    padding: 0px;
+    margin: 0;
+    overflow: scroll;
+}
+#category .category-list ul li{
+    list-style: none;
+
+}
+
+#category .category-list ul label h4{
+    color: lightgray;
+    margin: 0;
+    background-color: var(--firstC);
+    padding: 6px;
+    border-radius: 5px;
+    margin: 0px 0 5px  4px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.137);
+    height: 33px;
+    width: max-content;
+}
+#category .category-list input{
+    display: none;
+}
+#category .category-list input:nth-child(1):checked ~ ul #math-title,
+#category .category-list input:nth-child(2):checked ~ ul #arabic-title,
+#category .category-list input:nth-child(3):checked ~ ul #english-title,
+#category .category-list input:nth-child(4):checked ~ ul #french-title,
+#category .category-list input:nth-child(5):checked ~ ul #physic-title,
+#category .category-list input:nth-child(6):checked ~ ul #science-title,
+#category .category-list input:nth-child(7):checked ~ ul #madania-title,
+#category .category-list input:nth-child(8):checked ~ ul #hisGeo-title,
+#category .category-list input:nth-child(9):checked ~ ul #islamic-title
+{
+    background-color: #234d6d;
+}

@@ -1,0 +1,12 @@
+.home{
+    display: block;
+    width: -webkit-fill-available;
+    color: lightgray;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 11px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+}

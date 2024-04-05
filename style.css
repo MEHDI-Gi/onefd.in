@@ -1,0 +1,491 @@
+body{
+    background-color: var(--primary-color);
+    margin: 0;
+    font-family: monospace;
+    transition: 0.5s;
+    height: 1000px;
+}
+:root{
+    --primary-color:  #23272f;
+    --secondary-color: lightgray;
+    --firstC: #343a46;
+    --secondC: #adadade0;
+    --hoverc: #24303c;
+    --searchBack: #23272f77;
+    --navBar: #0766a1;
+}
+.lightTheme{
+    --primary-color: lightgray ;
+    --secondary-color: #23272f;
+    --firstC: #adadade0;
+    --secondC: #24303c;
+    --hoverc: #cac8c8e3;
+
+}
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
+/*---- FixBox ----*/
+.boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 15px 60px 0;
+    z-index: 9999;
+}
+.boxes .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: var(--firstC);
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.boxes .box:hover{
+    background-color: var(--hoverc);
+}
+.boxes .box i{
+    margin: 0;
+    font-size: 12px;
+    color: var(--secondary-color);
+    transition: 0.5s;
+
+}
+/*---- topBar ----*/
+.topBar{
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 99999;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+}
+/*---- Header ----*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: -webkit-fill-available;
+}
+.header .profile{
+    margin: 15px 15px 15px 20px;
+    display: flex;
+}
+.header .profile img{
+    height: 25px;
+    width: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+.header .profile i{
+    display: none;
+    color: var(--secondary-color);
+    font-size: 20px;
+    transition: 0.5s;
+}
+.header .logo h2{
+    color: var(--secondary-color);
+    font-family: monospace;
+    font-size: 23px;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.header .search{
+    display: flex;
+    margin: 15px 20px 15px 15px;
+    cursor: pointer;
+}
+.header .search i{
+    color: var(--secondary-color);
+    font-size: 20px;
+    transition: 0.5s;
+
+}
+/*---- Search ----*/
+@keyframes searchAnim{
+    0%{
+        filter: opacity(0);
+        backdrop-filter: blur(0px);
+    }
+    100%{
+    }
+}
+.searchDiv{
+    display: none;
+    position: fixed;
+    width: -webkit-fill-available;
+    height: 0;
+    overflow: hidden;
+    top: 0;
+    backdrop-filter: blur(3px);
+    background-color: var(--searchBack);
+    transition: 0.5s;
+    z-index: 999;
+    animation-name: searchAnim;
+    animation-duration: 0.5s;
+}
+
+.searchDownDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1% 5%;
+    top: 0;
+    
+}
+
+.searchDownDiv .imgInp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -webkit-fill-available;
+    /*background-color: var(--firstC);*/
+    padding: 1% 0%;
+    border-radius: 20px;
+    z-index: 100;
+}
+.searchDownDiv .imgInp input{
+    background-color: #343a46;
+    color: lightgray;
+    font-family: monospace;
+    border: solid 0px;
+    width: 90%;
+    height: 39px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+.searchDownDiv .imgInp i{
+    padding: 12px ;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px 0 0 8px;
+    background-color: #343a46;
+    color: lightgray;
+}
+.searchDownDiv .imgInp i:hover{
+    background-color: var(--hoverc);
+}
+.searchDownDiv .imgInp .fa-xmark{
+    padding: 12px ;
+    border-radius:  0 8px 8px 0 ;
+    background-color: #343a46;
+    cursor: pointer;
+    font-size: 15px;
+}
+.searchDownDiv .imgInp .fa-xmark:hover{
+    background-color: #6826269d;
+}
+
+/*---- navBar ----*/
+.navBar{
+    width: -webkit-fill-available;
+}
+.navBar .sections{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    width: -webkit-fill-available;
+    border-bottom: solid 0.5mm var(--firstC);
+    margin: 0;
+}
+.navBar .sections .section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    cursor: pointer;
+
+}
+.navBar .sections .section:hover{
+    background-color: var(--hoverc);
+}
+.navBar .sections .section i{
+    color: var(--secondary-color);
+    font-size: 15px;
+    transition: 0.5s;
+
+}
+/*---- SideBar ----*/
+#sideBarDiv{
+    display: flex;
+    position: fixed;
+    height: 100%;
+    /*width: -webkit-fill-available;*/
+    width: 0;
+    z-index: 150000;
+}
+#sideClose{
+    width: 0;
+    height: 100%;
+    transition: 0.5s;
+}
+.sideBar{
+    background-color: var(--primary-color);
+    width: 0;
+    overflow-x: hidden;
+    height: 100%;
+    transition: 0.5s;
+    flex-direction: column;
+    border-right: solid 0.5mm var(--firstC);
+}
+.sideBar .sections .myprofile{
+    display: flex;
+    align-items: center;
+}
+.sideBar .sections .myprofile .myprofileImg{
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+.sideBar .sections .myprofile .myprofileImg img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.sideBar .sections .myprofile .myprofileName {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sideBar .sections .myprofile .myprofileName h2{
+    margin: 0;
+}
+.sideBar .sections .myprofile .myprofileName h5{
+margin: 0;
+}
+/*---- Screen ----*/
+.screen{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+    width: -webkit-fill-available;
+    height: 800px;
+}
+#booksSelect{
+    display: none;
+}
+/* sections */
+.section{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.section ul{
+    display: flex;
+    padding: 3px 0 5px 0;
+    margin: 0;
+}
+.section ul li{
+    list-style: none;
+}
+.section ul h5{
+    background-color: var(--firstC);
+    color: var(--secondary-color);
+    padding: 6px;
+    margin: 0 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: max-content;
+    transition: 0.5s;
+
+}
+/*---- Books ----*/
+.books .bookDiv{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-bottom: 8px;
+    display: flex;
+}
+.booksToggle{
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    display: grid;
+}
+.books{
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+}
+.books .title{
+    display: flex;
+    align-items: center;
+}
+.bookDiv .book .titleHover{
+    width: 100px;
+    height: 140px;
+    border-radius: 5px;
+    position: absolute;
+    transition: 0.5s;
+}
+.books .title h3{
+    color: var(--secondary-color);
+    font-size: 15px;
+    margin: 4px 8px;
+    transition: 0.5s;
+
+}
+
+.bookDiv .book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px 2px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    max-width:  100px;
+}
+.bookDiv .book .cover{
+    display: flex;
+}
+.bookDiv .book:hover .title{
+    height: 140px;
+}
+.bookDiv .book .cover img {
+    width: 100px;
+    height: 140px;
+    border-radius: 5px;
+}
+.bookDiv .book #tallTitle{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    /* height: 0px; */
+    border-radius: 5px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: absolute;
+    transition: 0.5s;
+    bottom: 0px;
+    overflow: hidden;
+    padding: 0;
+}
+.bookDiv .book .title {
+    display: flex;
+    font-family: monospace;
+    flex-direction: column;
+    width: 100px;
+    height: 140px;
+    border-radius: 5px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: absolute;
+    transition: 0.5s;
+    bottom: 0px;
+    overflow: hidden;
+    padding: 0;
+    background: linear-gradient(0deg, #000000cf, transparent, transparent);
+}
+.bookDiv .book .title h3{
+    margin: 0 0 0 5px;
+    font-size: 10px;
+    color: #ffffff;
+    filter: drop-shadow(1px 1px 0px black);
+}
+.bookDiv .book .title h6{
+    margin: 0 0 5px 5px;
+    font-size: 5px;
+    color: #ffffff;
+    filter: drop-shadow(1px 1px 0px black);
+}
+
+/*---- Community ----*/
+.screen .comun{
+    display: none;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-color: var(--primary-color);
+}
+/*---- footer ----*/
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: -webkit-fill-available;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+
+}
+.footer .sections{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: -webkit-fill-available;
+    border-top: solid 0.5mm var(--firstC);
+    margin: 0;
+}
+.footer .sections .section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    cursor: pointer;
+}
+.footer .sections .section:hover{
+    background-color: var(--hoverc);
+}
+.footer .sections .section i{
+    color: var(--secondary-color);
+    font-size: 15px;
+    transition: 0.5s;
+
+}
+/*   scroll  */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-track { 
+    background: rgba(0, 0, 0, 0.212); 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(93 93 93 / 62%); 
+  }
+
+
+  /* { Home } */
+  #home{
+    display: none;
+  }
+  #message{
+    display: none;
+  }
+  #message #screenMessage .screenMsgTitle{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    width: -webkit-fill-available;
+    border-bottom: solid 0.5mm var(--firstC);
+    margin: 0;
+    height: 45px;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+    color: var(--secondary-color);
+    font-family: monospace;
+  }
+  #message #screenMessage .screenMsgTitle .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  #message #screenMessage .screenMsgTitle .title:hover{
+    background-color: var(--hoverc);
+  }
+  #message #screenMessage .screenMsgTitle .title h3{
+    font-size: 18px;
+    margin: 0;
+  }

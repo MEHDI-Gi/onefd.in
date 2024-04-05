@@ -1,0 +1,189 @@
+.math .nav{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    border-bottom: solid 0.5px var(--navBar);
+    position: relative;
+    padding: 5px 0px;
+}
+.math input{
+    display: none;
+}
+.math .nav label{
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    font-size: 11px;
+    /* margin: 5px 0 5px 0; */
+    color: var(--secondary-color);
+}
+
+.math .nav .under-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--liceyBack);
+    width: 33.333%;
+    height: 1px;
+    transition: 0.5s;
+}
+
+.math  input:nth-child(1):checked ~ .nav > #bks{
+    color: var(--liceyBack);
+}
+.math  input:nth-child(2):checked ~ .nav > #exr{
+    color: var(--liceyBack);
+}
+.math  input:nth-child(3):checked ~ .nav > #ybc{
+    color: var(--liceyBack);
+}
+
+
+.math  input:nth-child(1):checked ~ .nav > .under-line{
+    translate: 0;
+}
+.math  input:nth-child(2):checked ~ .nav > .under-line{
+    translate: 100%;
+}
+.math input:nth-child(3):checked ~ .nav > .under-line{
+    translate: calc(100% * 2);
+}
+
+.math .content{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    width: 300%;
+    transition: 0.5s;
+}
+
+.math input:nth-child(1):checked ~ .content{
+    translate: 0px;
+}
+.math input:nth-child(2):checked ~ .content{
+    translate: -33.333%;
+}
+.math input:nth-child(3):checked ~ .content{
+    translate: calc(-33.333% * 2);
+}
+
+.math .content .main-title{
+    color: var(--secondary-color);
+    margin: 0px;
+    font-family: Cairo;
+    border-bottom: solid 0.5mm #132447;
+    transition: 0.5s;
+}
+
+.math .content .lists{
+    margin: 0px;
+    border-radius: 0px;
+    padding-bottom: 8px;
+    /* border-bottom: solid 0.5px #132447; */
+    width: 100%;
+}
+
+.math .content .lists .list-title{
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    margin: 0 20px;
+    padding-right: 10px;
+    color: var(--secondary-color);
+    transition: 0.5s;
+    justify-content: flex-start;
+}
+.math .content .lists .list-title::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--liceyBack);
+    width: 3px;
+    height: 100%;
+}
+.math .content .lists ul{
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    width: -webkit-fill-available;
+    margin: 0 10px 10px 10px;
+    direction: rtl;
+}
+.math .content .lists ul li{
+    list-style: none;
+    position: relative;
+    margin: 5px 5px 5px 5px;
+    background-color: var(--firstC);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.137);
+
+}
+.math .content .lists ul li a{
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.math .content #exercise{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    direction: rtl;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.math .content #exercise ul{
+    grid-template-columns: 100%;
+
+}
+
+.math .content #lessons ul{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    margin-top: 10px;
+    
+}
+/* .math .content #lessons ul h4{
+    margin: 0 10px 0 0;
+    color: var(--secondary-color);
+    text-align: start;
+    transition: 0.5s;
+} */
+.math .content #lessons ul li{
+    position: relative;
+    padding: 0px 10px 0px 10px;
+    margin: 2.5px 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.137);
+
+}
+.math .content #lessons ul li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--liceyBack);
+    width: 3px;
+    height: 100%;
+}
+.math .content #lessons ul li .title{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+    margin: 0 0 0px 0;
+}
+
+.math .content #lessons ul li .video{
+    overflow: hidden;
+    transition: 0.5s;
+    height: 0;
+}
+.math .content #lessons ul li .video iframe{
+    height: 100%;
+    width: 100%;
+    padding: 0px 0 10px 0;
+    border-radius: 5px;
+}

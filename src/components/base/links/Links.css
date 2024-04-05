@@ -1,0 +1,84 @@
+#links{
+    width: -webkit-fill-available;
+    transition: 0.5s;
+    display: none;
+}
+#links a{
+    color: lightgrey;
+    transition: 0.5s;
+
+}
+#links ul{
+    margin: 0 10px 45px 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#links h5{
+    color: var(--secondary-color);
+    font-size: 15px;
+    font-family: Cairo;
+    margin: 5px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#links ul li{
+    position: relative;
+    list-style: none;
+    background-color: var(--firstC);
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.137);
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+#links ul li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--liceyBack);
+}
+
+#links ul li .title{
+    padding: 10px;
+}
+
+#links ul li .title a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Cairo;   
+    display: flex;
+    justify-content: center;
+}
+
+#links ul li .scolar{
+    display: flex;
+    overflow: hidden;
+    height: 0px;
+    transition: 0.5s;
+    flex-direction: column;
+}
+
+
+
+#links ul li .scolar a{
+    font-family: Cairo;
+    font-size: 17px;
+    background-color: #0a1327;    
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.137);
+    margin: 5px 15px 5px 15px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
