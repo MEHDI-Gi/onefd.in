@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/onefd.in/static/css/main.44cb7505.css",
+    "main.js": "/onefd.in/static/js/main.062b72a0.js",
+    "static/js/453.b5ae9d9f.chunk.js": "/onefd.in/static/js/453.b5ae9d9f.chunk.js",
+    "static/media/Onefd.png": "/onefd.in/static/media/Onefd.9650de0b00d9bc44d84c.png",
+    "index.html": "/onefd.in/index.html",
+    "main.44cb7505.css.map": "/onefd.in/static/css/main.44cb7505.css.map",
+    "main.062b72a0.js.map": "/onefd.in/static/js/main.062b72a0.js.map",
+    "453.b5ae9d9f.chunk.js.map": "/onefd.in/static/js/453.b5ae9d9f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44cb7505.css",
+    "static/js/main.062b72a0.js"
+  ]
+}
