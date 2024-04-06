@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    font-family: Cairo;
+
 }
 
 body{
     background-color: var(--primary-color);
-    margin: 0;
-    font-family: Cairo;
     transition: 0.5s;
     user-select: none;
 
@@ -25,7 +25,7 @@ body{
     --link-list: #132447;
     --link-a: #0a1327;
 }
-.lightTheme{
+/*.lightTheme{
     --primary-color:  lightgray;
     --secondary-color: #0a1327;
     --firstC: #132447;
@@ -34,7 +34,7 @@ body{
     --link-list: #0a1327;
     --link-a: #132447;
 
-}
+}*/
 #root{
     display: flex;
     flex-direction: column;
